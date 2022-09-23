@@ -1,0 +1,22 @@
+.container {
+    padding-top: 50px !important;
+    /* padding-left: 50px !important;
+    padding-right: 50px !important; */
+}
+
+.collapse {
+    background-color: #c8c8c8;
+}
+
+.dropdown-toggle {
+    text-align: center;
+}
+
+.pricing-header {
+    padding-top: 100px !important;
+}
+
+.card-deck {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+}
