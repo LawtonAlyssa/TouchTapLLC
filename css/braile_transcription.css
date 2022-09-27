@@ -1,17 +1,42 @@
 input[type="file"] {
     display: block;
-  }
-  .imageThumb {
+}
+
+.imageThumb {
     max-height: 75px;
     border: 2px solid;
     padding: 1px;
     cursor: pointer;
-  }
-  .pip {
+}
+
+.pip {
     display: inline-block;
     margin: 10px 10px 0 0;
-  }
-  .remove {
+}
+.card-img {
+    object-fit: cover !important;
+    height: 15vw !important;
+    width: 100 !important;
+    /* columns: 3 !important; */
+}
+
+
+/* .card-deck { */
+    /* display: flex; */
+    /* @include media-breakpoint-only(lg) { */
+        /* column-count: 3;
+         */
+    /* } */
+
+    /* @include media-breakpoint-only(xl) { */
+        /* column-count: 5; */
+    /* } */
+/* } */
+
+/* .card-img-overlay {
+    margin-right: ;
+  } */
+/* .remove {
     display: block;
     background: #444;
     border: 1px solid black;
@@ -22,4 +47,4 @@ input[type="file"] {
   .remove:hover {
     background: white;
     color: black;
-  }
+  } */
