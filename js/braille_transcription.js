@@ -35,7 +35,7 @@ function loadEvent() {
                             // modified v-2
                             document.getElementById("photo-preview").innerHTML += "<div class=\"col mb-4\"> "+
                             "<br/><div class=\"card\">" +
-                            "<br/><img class=\"card-img\" src=\"" + e.target.result + "\" alt=\"" + file.name + "\"/>" +
+                            "<br/><img class=\"card-img\" src=\"" + file.result + "\" alt=\"" + file.name + "\"/>" +
                             "<br/><div class=\"card-img-overlay text-right\">"+
                             "<br/><a class=\"close\" href=\"#\"><i class=\"fa fa-trash fa-lg\"></i></a>"+
                             "<br/></div>" +
