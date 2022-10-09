@@ -36,11 +36,22 @@
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
             <h1 class="display-4">Braille Transcription</h1>
         </div>
-        <h3>Upload your images</h3>
-        <input type="file" id="files" name="files[]" multiple />
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-3" id="photo-preview">
-
+        <div class="d-flex">
+            <div class="mr-auto p-2">
+                <h3>Upload your images</h3>
+            </div>
+            <div class="p-2">
+                <input type="button" class="btn btn-dark" id="upload-button" value="Upload" />
+            </div>
         </div>
+
+        <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 row-cols-lg-3 row-cols-xl-3" id="photo-preview">
+            <input type="file" id="files" name="files[]" multiple />
+        </div>
+<!--         
+        <form action="mailto:alawton1@my.hpu.edu">
+        </form> -->
+
     </div>
 
 </body>
