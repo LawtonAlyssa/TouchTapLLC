@@ -15,10 +15,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
-    <script src="js/setup.js"></script>
+    <script type="module" src="js/setup.js"></script>
 
     <!-- Page Includes -->
-    <script src="js/o_m_services.js"></script>
+    <script type="module" src="js/o_m_services.js"></script>
     <!-- Style Template -->
     <script src="https://kit.fontawesome.com/3aad77fea3.js" crossorigin="anonymous"></script>
     <!-- style css -->
@@ -29,49 +29,36 @@
 
 <body>
     <div data-include="nav_bar"></div>
+
     <div class="contianer">
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
             <h1 class="display-4">Orientation & Mobility Services</h1>
-            <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap
-                example. It's built with default Bootstrap components and utilities with little customization.</p>
+            <p class="lead">Select one or more of our services to improve your orientation & mobility skills with help
+                from Touch Tap LLC.</p>
         </div>
+
         <div class="card-deck mb-10 text-center">
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
-                    <h5 class="my-0 font-weight-normal">Orientation & Mobility Assessment</h5>
+                    <h5 class="my-0 font-weight-normal" id="h5-7">Orientation & Mobility Assessment</h5>
                 </div>
                 <div class="card-body d-flex flex-column">
-                    <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+                    <h1 class="card-title pricing-card-title" id="cost-7">$250</h1>
                     <ul class="list-unstyled mt-3 mb-4">
                         <li>TAPS 2nd Edition: </li>
                         <li>An Orientation & Mobility curriculum for students/adults with visual impairments</li>
                     </ul>
 
-                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="o_m_assess"
+                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="7"
                         data-toggle="button" aria-pressed="false" autocomplete="off">Select</button>
                 </div>
             </div>
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
-                    <h5 class="my-0 font-weight-normal d-flex flex-column">Attending Behaviors: Auditory Abilities</h5>
+                    <h5 class="my-0 font-weight-normal" id="h5-8">Posture & Gait</h5>
                 </div>
                 <div class="card-body d-flex flex-column">
-                    <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>Use of auditory information for orientation purposes, such as tracking a moving sound and
-                            applying spatial concepts to sound localization (e.g., traffic is behind me)</li>
-                    </ul>
-
-                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="ab_aa"
-                        data-toggle="button" aria-pressed="false" autocomplete="off">Select</button>
-                </div>
-            </div>
-            <div class="card mb-4 box-shadow">
-                <div class="card-header">
-                    <h5 class="my-0 font-weight-normal">Posture & Gait</h5>
-                </div>
-                <div class="card-body d-flex flex-column">
-                    <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+                    <h1 class="card-title pricing-card-title" id="cost-8">$200</h1>
                     <ul class="list-unstyled mt-3 mb-4">
                         <li>Maintains good posture when traveling</li>
                         <li>Positions toes in direction of travel when walking</li>
@@ -79,93 +66,154 @@
                         <li>Maintains adequate speed when walking</li>
                     </ul>
 
-                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="p_g"
+                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="8"
                         data-toggle="button" aria-pressed="false" autocomplete="off">Select</button>
                 </div>
             </div>
-        </div>
-        <div class="card-deck mb-10 text-center">
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
-                    <h5 class="my-0 font-weight-normal">Turns & Directionality</h5>
+                    <h5 class="my-0 font-weight-normal" id="h5-9">Turns & Directionality</h5>
                 </div>
                 <div class="card-body d-flex flex-column">
-                    <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+                    <h1 class="card-title pricing-card-title" id="cost-9">$200</h1>
                     <ul class="list-unstyled mt-3 mb-4">
                         <li>Makes 90°, 180°, and 360° turns upon request</li>
                         <li>Applies directionality in complex environmental situations</li>
                         <li>(e.g., far-parallel lane turns right into traveler’s perpendicular line of travel)</li>
                     </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="t_d"
+                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="9"
                         data-toggle="button" aria-pressed="false" autocomplete="off">Select</button>
-                </div>
-            </div>
-            <div class="card mb-4 box-shadow">
-                <div class="card-header">
-                    <h5 class="my-0 font-weight-normal">Landmarks/Clues</h5>
-                </div>
-                <div class="card-body d-flex flex-column">
-                    <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>Uses landmarks and clues for orientation</li>
-                    </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="l_c"
-                        data-toggle="button" aria-pressed="false" autocomplete="off">Select</button>
-                </div>
-            </div>
-            <div class="card mb-4 box-shadow">
-                <div class="card-header">
-                    <h5 class="my-0 font-weight-normal">Home Environment: Navigation</h5>
-                </div>
-                <div class="card-body d-flex flex-column">
-                    <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>Able to travel independently in familiar routes at home</li>
-                        <li>Navigates doors and stairways</li>
-                        <li>Stops when there is an obstacle or drop-off</li>
-                    </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="he_m"
-                    data-toggle="button" aria-pressed="false" autocomplete="off">Select</button>
                 </div>
             </div>
         </div>
         <div class="card-deck mb-10 text-center">
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
-                    <h5 class="my-0 font-weight-normal">Doors, Stairs, Escalators, & Elevators</h5>
+                    <h5 class="my-0 font-weight-normal" id="h5-10">Landmarks/Clues Identification</h5>
                 </div>
                 <div class="card-body d-flex flex-column">
-                    <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+                    <h1 class="card-title pricing-card-title" id="cost-10">$150</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Uses landmarks and clues for orientation</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="10"
+                        data-toggle="button" aria-pressed="false" autocomplete="off">Select</button>
+                </div>
+            </div>
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h5 class="my-0 font-weight-normal" id="h5-11">Home Environment: Navigation</h5>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h1 class="card-title pricing-card-title" id="cost-11">$150</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Able to travel independently in familiar routes at home</li>
+                        <li>Navigates doors and stairways</li>
+                        <li>Stops when there is an obstacle or drop-off</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="11"
+                        data-toggle="button" aria-pressed="false" autocomplete="off">Select</button>
+                </div>
+            </div>
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h5 class="my-0 font-weight-normal" id="h5-12">Doors, Stairs, Escalators, & Elevators</h5>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h1 class="card-title pricing-card-title" id="cost-12">$200</h1>
                     <ul class="list-unstyled mt-3 mb-4">
                         <li>Operating doors, stairs, escalators, and elevators</li>
                     </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="d_s_e_e"
+                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="12"
                         data-toggle="button" aria-pressed="false" autocomplete="off">Select</button>
                 </div>
             </div>
+        </div>
+        <div class="card-deck mb-10 text-center">
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
-                    <h5 class="my-0 font-weight-normal">Sighted Guide for Self/Family</h5>
+                    <h5 class="my-0 font-weight-normal" id="h5-13">Sighted Guide for Self/Family</h5>
                 </div>
                 <div class="card-body d-flex flex-column">
-                    <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+                    <h1 class="card-title pricing-card-title" id="cost-13">$100</h1>
                     <ul class="list-unstyled mt-3 mb-4">
                         <li>Correctly holds the guide and maintains an appropriate pace</li>
                     </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="sgf_sf"
+                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="13"
                         data-toggle="button" aria-pressed="false" autocomplete="off">Select</button>
                 </div>
             </div>
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
-                    <h5 class="my-0 font-weight-normal">Cane Techniques (Basics)</h5>
+                    <h5 class="my-0 font-weight-normal" id="h5-14">Cane Techniques (Basics)</h5>
                 </div>
                 <div class="card-body d-flex flex-column">
-                    <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+                    <h1 class="card-title pricing-card-title" id="cost-14">$150</h1>
                     <ul class="list-unstyled mt-3 mb-4">
                         <li>Centered, Correct Arc Size, and Grip</li>
                     </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="ct_b"
+                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="14"
+                        data-toggle="button" aria-pressed="false" autocomplete="off">Select</button>
+                </div>
+            </div>
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h5 class="my-0 font-weight-normal" id="h5-15">Cardinal Direction</h5>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h1 class="card-title pricing-card-title" id="cost-15">$100</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Identify north, south, east, and west. Use the sun to determine cardinal directions</li>
+                        <li>Plan and execute routes using cardinal directions</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="15"
+                        data-toggle="button" aria-pressed="false" autocomplete="off">Select</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck mb-10 text-center">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h5 class="my-0 font-weight-normal" id="h5-16">Wheelchair Familiarization</h5>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h1 class="card-title pricing-card-title" id="cost-16">$200</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Maintains a line of travel, makes turns, and travel safely over irregular surfaces</li>
+                        <li>(e.g., gravel)</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="16"
+                        data-toggle="button" aria-pressed="false" autocomplete="off">Select</button>
+                </div>
+            </div>
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h5 class="my-0 font-weight-normal" id="h5-17">Residential Street Crossings</h5>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h1 class="card-title pricing-card-title" id="cost-17">$150</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Identifies and uses parallel and perpendicular traffic patterns, low- and high-volume
+                            intersections</li>
+                        <li>Travels safely in areas without sidewalks</li>
+                        <li>Identifies stop-sign and traffic-light controlled intersections</li>
+                        <li>Position oneself correctly for crossing</li>
+                        <li>Uses the address system to locate unfamiliar destinations</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="17"
+                        data-toggle="button" aria-pressed="false" autocomplete="off">Select</button>
+                </div>
+            </div>
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h5 class="my-0 font-weight-normal" id="h5-18">Night Travel</h5>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h1 class="card-title pricing-card-title" id="cost-18">$200</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Traveling safely in the evening</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-outline-success mt-auto" id="18"
                         data-toggle="button" aria-pressed="false" autocomplete="off">Select</button>
                 </div>
             </div>

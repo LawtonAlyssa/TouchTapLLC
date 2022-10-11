@@ -7,15 +7,27 @@
         <i class="fa fa-user fa-lg"></i> </button> -->
     <a href="login.html" class="btn btn-default"><i class="fa fa-user fa-lg"></i></a>
 
-    <button type="button" class="btn dropbtn" data-toggle="popover"><i
-            class="fa fa-shopping-cart fa-lg"></i></button>
-    <h1 class="d-sm-none vertical_menu_head" id="popover-head">User Menu</h1>
+    <button type="button" class="btn dropbtn" data-toggle="popover"><i class="fa fa-shopping-cart fa-lg"></i></button>
+    <h1 class="d-sm-none vertical_menu_head" id="popover-head">Shopping Cart</h1>
     <div class="d-sm-none" id="popover-content">
-        <div class="text">
-            Cart is currently empty.
-        </div>
+        <table class="table table-striped" id="cart-table">
+            <thead class="thead-dark" id="dark-header">
+                <tr id="dark-row">
+                    <th scrope="col">Service</th>
+                    <th scrope="col">Cost</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-cart"></tbody>
+            <tfoot>
+                <tr>
+                    <td>Sum Total</td>
+                    <td id="sum-cart">$0</td>
+                </tr>
+            </tfoot>
+        </table>
+        <input type="hidden" id="checkout" name="cart-items" value="">
+        <button type="button" id="checkout_btn" class="btn btn-dark btn-block" data-toggle="modal" data-target="#purchaseModal">Check Out</button>
     </div>
-
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,10 +56,11 @@
                 <a class="nav-link" href="contact.html">Contact</a>
             </li>
             <li class="nav-item">
-                <a href="payment_confirmation.html" class="btn btn-link text-center">Already have an order? Click Here</a>
+                <a href="payment_confirmation.html" class="btn btn-link text-center">Already have an order? Click
+                    Here</a>
             </li>
         </ul>
-        
+
     </div>
 
 
@@ -59,3 +72,21 @@
                 <i class="fa fa-shopping-cart fa-lg"></i> </button></li>
     </ul> -->
 </nav>
+
+<!-- Modal -->
+<div class="modal fade" id="purchaseModal" tabindex="-1" role="dialog" aria-labelledby="purchaseModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="purchaseModalLabel">Order Confirmation</h5>
+            <button type="button" class="close" id="modal_close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p>Your order request has been sent!</p>
+        </div>
+    </div>
+</div>
+</div>
